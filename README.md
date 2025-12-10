@@ -124,4 +124,3 @@ python example_files/predict.py models/linear_regression_model.sav data/X_test.c
 ```
 
 
-## to be continued ...
