@@ -12,6 +12,7 @@ The provided data set was acquired from https://zindi.africa/competitions/zindiw
   - Model training and evaluation
 - `data/` – raw and/or processed data 
 - `presentation/` – slides from the project presentation (optional)
+- `graphs` - our results in figures
 
 > Note: The **EDA file is the main entry point** to follow the full workflow from data exploration to model evaluation.
 
