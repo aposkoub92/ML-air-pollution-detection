@@ -10,7 +10,7 @@ The provided data set was acquired from https://zindi.africa/competitions/zindiw
   - Exploratory Data Analysis (EDA)
   - Feature engineering
   - Model training and evaluation
-- `data/` – raw and/or processed data (not included in repo if under license restrictions)
+- `data/` – raw and/or processed data 
 - `presentation/` – slides from the project presentation (optional)
 
 > Note: The **EDA file is the main entry point** to follow the full workflow from data exploration to model evaluation.
