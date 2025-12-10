@@ -4,7 +4,54 @@ This repository contains files for the ML Project during week 7-8 of the Data Sc
 
 The provided data set was acquired from https://zindi.africa/competitions/zindiweekendz-learning-urban-air-pollution-challenge. It contains over 30,000 measurements from over 300 different, unspecified locations over a timeframe of 3 months (January to April 2020). Measured metrics include temperature, precipitation, wind, and humidity, as well as densities and concentrations of gases like NO2, O3, CO, SO2, etc. For each measurement the dependent variable of the PM2.5 concentration is given.
 
-Our approach involved training a Random Forest Regressor, a supervised machine learning algorithm, and evaluating its performance using the Root Mean Squared Error (RMSE). We also trained multiple linear regression models (expert models) for categories inferred from the data set (such as climate zones, seasons, urbanization levels) and subsequently blended these into a single aggregated model. Performances of all models were optimized through cross-validated hyperparameter tuning.
+## Project Structure
+
+- `eda` – main notebook / script containing:
+  - Exploratory Data Analysis (EDA)
+  - Feature engineering
+  - Model training and evaluation
+- `data/` – raw and/or processed data (not included in repo if under license restrictions)
+- `presentation/` – slides from the project presentation (optional)
+
+> Note: The **EDA file is the main entry point** to follow the full workflow from data exploration to model evaluation.
+
+---
+
+## Approach
+
+1. **Exploratory Data Analysis (EDA)**
+   - Understand distributions, missing values, and relationships between pollutants and PM2.5
+   - Identify important features (e.g. CO and other gases, weather variables)
+
+2. **Baseline Model**
+   - Simple **Linear Regression** using a small subset of features (e.g. rainfall, humidity, wind speed)
+   - Serves as a benchmark for more complex models
+
+3. **Optimized Machine Learning Model**
+   - **RandomForestRegressor** trained on a richer feature set (weather + gas densities)
+   - Hyperparameter tuning with cross-validation
+   - Strong reduction in prediction error compared to the baseline
+
+4. **Expert Models & Blending**
+   - Data split into categories such as:
+     - Climate zones  
+     - Urban vs. rural areas  
+     - Air pollution levels  
+     - Wind speed bins  
+   - Separate **Linear Regression “expert models”** trained per category  
+   - A blending model combines these expert predictions into a single final estimate
+
+---
+
+## Results (RMSE)
+
+- Baseline Linear Regression: **≈ 42.5 μg/m³**  
+- Tuned Random Forest: **≈ 28.7 μg/m³**  
+- Blended expert model: **≈ 27.6 μg/m³** (best performance) :contentReference[oaicite:1]{index=1}
+
+These results show that **PM2.5 can be predicted reasonably well** from weather and satellite-derived gas measurements, even where no ground sensors are available.
+
+---
 
 ## Set up your Environment
 
