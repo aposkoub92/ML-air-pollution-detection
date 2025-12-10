@@ -48,7 +48,7 @@ The provided data set was acquired from https://zindi.africa/competitions/zindiw
 
 - Baseline Linear Regression: **≈ 42.5 μg/m³**  
 - Tuned Random Forest: **≈ 28.7 μg/m³**  
-- Blended expert model: **≈ 27.6 μg/m³** (best performance) :contentReference[oaicite:1]{index=1}
+- Blended expert model: **≈ 27.6 μg/m³** (best performance)
 
 These results show that **PM2.5 can be predicted reasonably well** from weather and satellite-derived gas measurements, even where no ground sensors are available.
 
